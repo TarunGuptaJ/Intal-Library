@@ -1,0 +1,89 @@
+DAA Assignment
+
+Introduction :	
+	An intal in an overview can be described as strings representing integers so that 
+there is no upper limit. For example an int, or a long int have upper limits to the size of 
+the integer that can be represented. Whereas an intal's limit of size can be made much higher
+and also that the limit is the memory available which makes it much more useful.In a general
+implementation of C code, if the range of numbers that we need, vary from int, long int, and 
+long long int we would be forced to used long long int even if in majority ofthe base cases 
+can be satisfied with int. This leads to memory wastage whereas an intal has no such 
+restriction so we save a lot of memory in such an implementation.
+
+Approach:
+    In total there are 16 functions the approach for each are as follows:
+    1.intal_add : Find the larger of the 2 or in correct words find the longer length of the
+   	intal and the iterate from the last for the length of the smaller and calculate the 
+	sum and carry accordingly. Now we iterate for the length of the remaining and if
+	carry is present it carries forward accordingly.
+
+    2.intal_compare : Find the length of the 2 intals whichever is greater return that, if
+	the lengths are same iterate from the left and the first non same integer should be
+	compared and whichever is greater is the greater element. If they are same 
+	throughout the intals are equal.
+	
+    3.intal_diff : Similar to addition we iterate through the 2 intals and the we take care 
+	the subtraction and carry that is required. 
+    
+    4.intal_multiply : This is accomplished by using the traditional style of multiplication
+	where we take each digit and multiply it through out where we again take care of 
+	addition and carry.
+
+    5.intal_mod : This uses the traditional method of division and slightly modified way of
+	accomplishing the division by coupling this with 2 helper functions slice and min.
+
+    6.intal_pow : This is done by doubling the number at every stage until its lesser than
+	the bigger once it cannot be doubled, it is linearly multiplied with the given 
+	intal. This again uses the intal_multiply function.
+
+    7.intal_gcd : We accomplish this by euclid's algorithm for gcd, it is implemented in 
+	an iterative way and we use the earlier define intal_mod function for the same.
+ 
+    8.intal_fibonacci : We iterate n times so and we follow the simple logic that in the 
+	fibonacci series that the next element is the sum of the previous 2 elements 
+	starting of with 0 and 1, the addition is accomplished by utilizing intal_add.
+
+    9.intal_factorial : We know that factorial of a number means finding the overall product
+	of all its consecutive numbers in decreasing order until 1. So this is accomplished
+	using a traditional for loop along with which we use the intal_multiply function
+	to find the factorial.
+
+    10.intal_bincoeff : We accomplish this using a DP table, and utilizing the pascal's 
+	identity we initialize a 2D matrix and we fill them up in a way similar to the
+	path finding algorithm(example) which allows only right and down movement.
+
+    11.intal_max : Iterate through the entirety of the array length and utilize
+	intal_compare and find the maximum element.
+
+    12.intal_min : Iterate through the entirety of the array length and utilize
+	intal_compare and find the minimum element.
+
+    13.intal_search : Iterate through the entirety of the array length and utilizing
+	intal compare we find the first occurence of the element to be found.
+
+    14.intal_binsearch : This is the algorithm to find the element by reducing the problem
+	into 2 halfs at every step so that we check for middle element. Too find the first 
+	occurence we just check the one lesser index and we change the conditions accordingly.
+
+    15.intal_sort : The sorting algorithm that I implemented was heapsort so that inplace
+	sorting can be accomplished.
+
+    16.coin_row_problem : The usual method of solving is utilizing a DP table but since, the
+	problem statement requires us to solve it in O(1) space. We do away with the DP table 
+	with the fact that we only need the maximum value so we just discard the minimum at 
+	every stage in this manner we make it O(1) space
+    
+
+Future Work:
+Functionalities that could be added :
+    1. There should be no limit on the size of input or output like restriction to 1000.
+    2. Inclusion of negative numbers in the implementation of intal.
+    3. The functions should not have a restriction of 2 operands.
+
+Implementation of a library for arbitrary length integers :
+    Implementing the the library in an object oriented way, so that it enables easier 
+    implementation and features like operator overaloading can be exploited but that would
+    require using C++ so that object oriented programming is possible.
+
+
+ 
